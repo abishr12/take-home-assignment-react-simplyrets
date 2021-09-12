@@ -4,10 +4,10 @@ const PropertyDetails = ({propertyDesc, displayPrice, address, listingDate}) => 
 
     return(
         <div className="description">
-         <div>{propertyDesc}</div>
-            <div>${displayPrice}</div>
-            <div>{address}</div>
-            <div>Listed: {listingDate}</div>
+            <div className="propertyDesc">{propertyDesc}</div>
+            <div className="displayPrice">${displayPrice}</div>
+            <div className="address" >{address}</div>
+            <div className="listingDate">Listed: {listingDate}</div>
         </div>
     )
 }

@@ -19,7 +19,7 @@ const PropertyTile = ({ details, favoritedList, setFavoritedList }) => {
 
     return (
         <div className="propertyTile">
-            <div>
+            <div className="houseTop">
 
                 <img className="houseImage" src={photoSrc} alt="houseImage" />
                 <img className="favoriteIcon" onClick={() => setFavoritedList({...favoritedList, [listingId]: !isFavorited})} src={isFavorited ? HeartFill : HeartStroke} alt="likeIcon"/>

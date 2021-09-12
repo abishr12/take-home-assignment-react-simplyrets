@@ -39,7 +39,7 @@ const PropertyListings = () => {
 
     return (
         <>
-        <div>Property Listings</div>
+        <div className="title">Property Listings</div>
         <div className="propertyList">
 
         {
