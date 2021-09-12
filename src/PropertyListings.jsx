@@ -11,7 +11,7 @@ const PropertyListings = () => {
         const cachedProperties = JSON.parse(localStorage.getItem('properties'));
         const cachedFavoritedProperties = JSON.parse(localStorage.getItem('favoritedProperties'))
 
-        if(cachedProperties.length) {
+        if(cachedProperties) {
             return setPropList(cachedProperties)
         } else {
             fetch('https://api.simplyrets.com/properties', {
@@ -22,7 +22,6 @@ const PropertyListings = () => {
                 }
             }).then(res => res.json())
             .then(result => {
-                console.log('result', result)
                 localStorage.setItem('properties', JSON.stringify(result))
                 return setPropList(result);
             })
@@ -52,7 +51,7 @@ const PropertyListings = () => {
                 details={details} 
             />
             )
-                 : <div>Loading...</div>
+                 : <div>Loading Properties...</div>
         }
         </div>
         </>

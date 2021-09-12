@@ -1,10 +1,10 @@
 
 
-const PropertyDetails = ({propertyDesc, displayPrice, address, listingDate}) => {
+const PropertyDetails = ({propertyDesc, displayPrice, address, listingDate, propertyDescAriaLabel}) => {
 
     return(
         <div className="description">
-            <div className="propertyDesc">{propertyDesc}</div>
+            <div aria-label={propertyDescAriaLabel} className="propertyDesc">{propertyDesc}</div>
             <div className="displayPrice">${displayPrice}</div>
             <div className="address" >{address}</div>
             <div className="listingDate">Listed: {listingDate}</div>
